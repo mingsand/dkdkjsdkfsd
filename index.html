@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생일 축하합니다</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e8e8e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .greeting {
+            position: absolute;
+            font-size: 3rem;
+            font-weight: 600;
+            color: #555;
+            opacity: 0;
+            animation: fadeInOut 3s ease-in-out forwards;
+        }
+
+        .card {
+            background: white;
+            width: 400px;
+            padding: 60px 40px;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeInCard 1s ease-in-out 3s forwards, floatCard 3s ease-in-out 4s infinite;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .message {
+            min-height: 150px;
+            padding: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeInCard {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatCard {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .greeting {
+                font-size: 2rem;
+            }
+            .card {
+                width: 90%;
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="greeting">생신 축하드려요</div>
+    
+    <div class="card">
+        <h2>사랑하는 아버지께</h2>
+        <div class="message">
+            아버지, 생신 축하드려요!<br>
+            어버지께 사랑과 감사를 전하며<br>
+            이 편지를 올립니다!<br>
+            열심히 공부해서 훌륭한 사람이 될게요!<br>
+            유채필 올림
+        </div>
+    </div>
+</body>
+</html>
